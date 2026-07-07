@@ -284,5 +284,6 @@ int main() {
     free(cityVector->data);
     free(cityVector);
 
+    fgets(inputBuffer, sizeof(inputBuffer), stdin);
     return 0;
 }
