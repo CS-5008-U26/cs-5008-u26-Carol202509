@@ -65,6 +65,10 @@ city *stringToCity(char* textLine) {
         return NULL;
     }
 
+    c->name = NULL;
+    c->population = 0;
+    c->nameLength = 0;
+
     while (p != NULL && fieldNum <= 9) {
         p = getNextField(p, ',', fieldBuffer);
 
@@ -180,7 +184,7 @@ int main() {
     }
 
     // print the results
-   printf("Total population: %lld\n", maxPopulation);
+   printf("Total population: %lld\n\n", maxPopulation);
    printf("Cities:\n");
    
    for (int i = numChosen - 1; i >= 0; i--) {
